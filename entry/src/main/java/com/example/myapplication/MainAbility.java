@@ -12,25 +12,5 @@ public class MainAbility extends Ability {
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setMainRoute(MainAbilitySlice.class.getName());
-        Slider s=(Slider)findComponentById(ResourceTable.Id_slider_seek);
-        Image img=(Image)findComponentById(ResourceTable.Id_image_img);
-        s.setValueChangedListener(new Slider.ValueChangedListener() {
-            @Override
-            public void onProgressUpdated(Slider slider, int i, boolean b) {
-                float scale=((i/100.0f)+1);
-                img.setScaleX(scale);
-                img.setScaleY(scale);
-            }
-
-            @Override
-            public void onTouchStart(Slider slider) {
-
-            }
-
-            @Override
-            public void onTouchEnd(Slider slider) {
-
-            }
-        });
     }
 }
