@@ -1,11 +1,9 @@
-package com.example.myapplication.slice;
-
-        import com.example.myapplication.ResourceTable;
-        import ohos.aafwk.ability.AbilitySlice;
-        import ohos.aafwk.content.Intent;
-        import ohos.agp.components.Image;
-        import ohos.agp.components.Slider;
-        import ohos.agp.components.Text;
+import com.example.myapplication.ResourceTable;
+import ohos.aafwk.ability.AbilitySlice;
+import ohos.aafwk.content.Intent;
+import ohos.agp.components.Image;
+import ohos.agp.components.Slider;
+import ohos.agp.components.Text;
 
 public class MainAbilitySlice extends AbilitySlice {
     @Override
