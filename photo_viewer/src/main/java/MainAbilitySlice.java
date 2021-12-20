@@ -1,4 +1,4 @@
-import com.example.myapplication.ResourceTable;
+import com.example.photo_viewer.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.Image;
