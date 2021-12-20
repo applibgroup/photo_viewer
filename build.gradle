@@ -23,7 +23,6 @@ buildscript {
     dependencies {
         classpath 'com.huawei.ohos:hap:2.4.4.2'
         classpath 'com.huawei.ohos:decctest:1.2.4.0'
-        implementation 'com.github.SaiPolu:HarmonyOS:Tag:1.0.1'
     }
 }
 
@@ -35,9 +34,7 @@ allprojects {
         maven {
             url 'https://developer.huawei.com/repo/'
         }
-        maven{
-            url 'https://jitpack.io'
-        }
+
 		jcenter()
     }
 }
