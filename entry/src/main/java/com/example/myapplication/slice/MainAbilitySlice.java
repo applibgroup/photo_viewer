@@ -14,10 +14,9 @@ public class MainAbilitySlice extends AbilitySlice {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
 //        Text t=(Text)findComponentById(ResourceTable.Id_text_zoom);
-        Slider s=(Slider)findComponentById(ResourceTable.Id_slider_seek);
-        Image img=(Image)findComponentById(ResourceTable.Id_image_img);
+//        Slider s=(Slider)findComponentById(ResourceTable.Id_slider_seek);
+//        Image img=(Image)findComponentById(ResourceTable.Id_image_img);
 //        float zoom= (float) 0.0;
-        Photoviewer obj=new Photoviewer();
 //        t.setText("Zoom = "+String.valueOf(zoom)+"%");
 //        s.setValueChangedListener(new Slider.ValueChangedListener() {
 //            @Override
@@ -39,7 +38,7 @@ public class MainAbilitySlice extends AbilitySlice {
 //
 //            }
 //        });
-        obj.onClick(s,img);
+//        obj.onClick(s,img);
     }
 
     @Override

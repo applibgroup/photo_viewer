@@ -5,39 +5,41 @@
     ohos:width="match_parent"
     ohos:alignment="center"
     ohos:orientation="vertical">
-
-    <Image
-        ohos:id="$+id:image_img"
-        ohos:width="match_parent"
+    <com.example.photo_viewer.Photoviewer
         ohos:height="match_parent"
-        ohos:image_src="$media:img"
-        ohos:layout_alignment="top"/>
-<!--        ohos:bottom_padding="60vp"/>-->
-
-    <Slider
-        ohos:id="$+id:slider_seek"
-        ohos:height="match_parent"
-        ohos:width="match_parent"
-        ohos:bottom_margin="26vp"
-        ohos:bottom_padding="36vp"
-        ohos:layout_alignment="horizontal_center"
+        ohos:width="match_parent"/>
+<!--        ohos:image_src="$media:img"/>-->
+<!--    <Image-->
+<!--        ohos:id="$+id:image_img"-->
+<!--        ohos:width="match_parent"-->
+<!--        ohos:height="match_parent"-->
+<!--        ohos:image_src="$media:img"-->
+<!--        ohos:layout_alignment="top"/>-->
 
 
-        />
-    <Text
-        ohos:id="$+id:text_zoom"
-        ohos:height="match_content"
-        ohos:width="match_content"
-        ohos:background_element="$graphic:background_ability_main"
-        ohos:layout_alignment="horizontal_center"
-        ohos:text="Zoom"
+<!--    <Slider-->
+<!--        ohos:id="$+id:slider_seek"-->
+<!--        ohos:height="match_parent"-->
+<!--        ohos:width="match_parent"-->
+<!--        ohos:bottom_margin="26vp"-->
+<!--        ohos:bottom_padding="36vp"-->
+<!--        ohos:layout_alignment="horizontal_center"-->
 
-        ohos:text_size="20vp"
-        ohos:bottom_margin="26vp"
-        ohos:bottom_padding="80vp"
-        ohos:below="$+id:slider_seek"
-        />
+
+<!--        />-->
+<!--    <Text-->
+<!--        ohos:id="$+id:text_zoom"-->
+<!--        ohos:height="match_content"-->
+<!--        ohos:width="match_content"-->
+<!--        ohos:background_element="$graphic:background_ability_main"-->
+<!--        ohos:layout_alignment="horizontal_center"-->
+<!--        ohos:text="Zoom"-->
+
+<!--        ohos:text_size="20vp"-->
+<!--        ohos:bottom_margin="26vp"-->
+<!--        ohos:bottom_padding="80vp"-->
+<!--        ohos:below="$+id:slider_seek"-->
+<!--        />-->
 
 
 </DirectionalLayout>
-<!--    ohos:text="$string:mainability_HelloWorld"-->
