@@ -14,6 +14,7 @@ import ohos.global.resource.ResourceManager;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.media.image.PixelMap;
+import ohos.multimodalinput.event.TouchEvent;
 import ohos.utils.net.Uri;
 
 import java.io.IOException;
@@ -89,38 +90,28 @@ public class Photoviewer extends Image implements Component.ClickedListener, oho
 
         @Override
         public void onClick(Component component) {
-                this.component = component;
-                Timer time = new Timer();
+        this.component = component;
+        Timer time = new Timer();
 
-                time.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                                AnimatorProperty animatorProperty = component.createAnimatorProperty();
-                                animatorProperty.scaleX(1).scaleY(1);
-                                animatorProperty.start();
-                        }
-                },500);
-                time.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                                AnimatorProperty animatorProperty = component.createAnimatorProperty();
-                                animatorProperty.rotate(360).setDuration(1500);
-                                animatorProperty.start();
-                        }
-                },1000);
-                AnimatorProperty animatorProperty = component.createAnimatorProperty();
-                animatorProperty.scaleX(5).scaleY(5);
-                animatorProperty.start();
+        time.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                        AnimatorProperty animatorProperty = component.createAnimatorProperty();
+                        animatorProperty.scaleX(1).scaleY(1);
+                        animatorProperty.start();
+                }
+        }, 500);
+        time.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                        AnimatorProperty animatorProperty = component.createAnimatorProperty();
+                        animatorProperty.rotate(360).setDuration(1500);
+                        animatorProperty.start();
+                }
+        }, 1000);
+        AnimatorProperty animatorProperty = component.createAnimatorProperty();
+        animatorProperty.scaleX(5).scaleY(5);
+        animatorProperty.start();
         }
 
-
-        public void setContext(Context c)
-        {
-                this.d=c;
-        }
-
-        public Context getC()
-        {
-                return d;
-        }
 }

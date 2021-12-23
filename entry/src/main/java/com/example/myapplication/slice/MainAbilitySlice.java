@@ -16,7 +16,6 @@ public class MainAbilitySlice extends AbilitySlice {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
         Photoviewer P = (Photoviewer) findComponentById(ResourceTable.Media_img);
-        P.setContext(this);
 
 
     }
