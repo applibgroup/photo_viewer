@@ -1,14 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DirectionalLayout
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    xmlns:app="http://schemas.huawei.com/res/custom"
     ohos:height="match_parent"
     ohos:width="match_parent"
     ohos:alignment="center"
     ohos:orientation="vertical">
     <com.example.photo_viewer.Photoviewer
         ohos:height="match_parent"
-        ohos:width="match_parent"/>
-<!--        ohos:image_src="$media:img"/>-->
+        ohos:width="match_parent"
+        ohos:image_src="$media:img"
+        ohos:clickable="true">
+
+</com.example.photo_viewer.Photoviewer>
+
+<!--        <Slider-->
+<!--            ohos:id="$+id:slider_seek"-->
+<!--            ohos:height="match_parent"-->
+<!--            ohos:width="match_parent"-->
+<!--            ohos:bottom_margin="26vp"-->
+<!--            ohos:bottom_padding="36vp"-->
+<!--            ohos:layout_alignment="horizontal_center"-->
+<!--/>-->
+<!--        <Text-->
+<!--            ohos:id="$+id:text_zoom"-->
+<!--            ohos:height="match_content"-->
+<!--            ohos:width="match_content"-->
+<!--            ohos:background_element="$graphic:background_ability_main"-->
+<!--            ohos:layout_alignment="horizontal_center"-->
+<!--            ohos:text="Zoom"-->
+
+<!--            ohos:text_size="20vp"-->
+<!--            ohos:bottom_margin="26vp"-->
+<!--            ohos:bottom_padding="80vp"-->
+<!--            ohos:below="$+id:slider_seek"-->
+<!--            />-->
+</DirectionalLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--    <Image-->
 <!--        ohos:id="$+id:image_img"-->
 <!--        ohos:width="match_parent"-->
@@ -25,7 +78,6 @@
 <!--        ohos:bottom_padding="36vp"-->
 <!--        ohos:layout_alignment="horizontal_center"-->
 
-
 <!--        />-->
 <!--    <Text-->
 <!--        ohos:id="$+id:text_zoom"-->
@@ -40,6 +92,3 @@
 <!--        ohos:bottom_padding="80vp"-->
 <!--        ohos:below="$+id:slider_seek"-->
 <!--        />-->
-
-
-</DirectionalLayout>

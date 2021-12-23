@@ -1,13 +1,12 @@
 package com.example.photo_viewer;
-import ohos.aafwk.ability.AbilityForm;
-import ohos.aafwk.ability.OnClickListener;
-import ohos.aafwk.ability.ViewsStatus;
+
+
+import ohos.aafwk.content.Intent;
+import ohos.aafwk.content.Operation;
 import ohos.agp.animation.AnimatorProperty;
 import ohos.agp.components.AttrSet;
-import ohos.agp.components.DirectionalLayout;
+import ohos.agp.components.Component;
 import ohos.agp.components.Image;
-import ohos.agp.render.opengl.Utils;
-import ohos.agp.render.render3d.Component;
 import ohos.app.Context;
 import ohos.global.resource.NotExistException;
 import ohos.global.resource.Resource;
@@ -15,12 +14,15 @@ import ohos.global.resource.ResourceManager;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 import ohos.media.image.PixelMap;
+import ohos.utils.net.Uri;
 
 import java.io.IOException;
 import java.util.Optional;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
-public class Photoviewer extends Image {
+public class Photoviewer extends Image implements Component.ClickedListener, ohos.agp.render.render3d.Component {
 
         private static final String TAG = Photoviewer.class.getSimpleName();
 
@@ -33,7 +35,10 @@ public class Photoviewer extends Image {
 
         private int imageType = 0;
 
+        private Context d=null;
+
         private Optional<PixelMap> pixelMapping;
+        private Component component;
 
         public Photoviewer(Context context) {
                 super(context);
@@ -42,9 +47,11 @@ public class Photoviewer extends Image {
         public Photoviewer(Context context, AttrSet attrSet) {
                 super(context, attrSet);
                 initAttr(attrSet);
+                setClickedListener(this);
         }
 
         private void initAttr(AttrSet attrSet) {
+
                 checkImagetype();
         }
 
@@ -53,6 +60,7 @@ public class Photoviewer extends Image {
                         case 0:
                                 pixelMapping = getPixelMapByResId(ResourceTable.Media_img);
                                 break;
+
                         default:
                                 pixelMapping = getPixelMapByResId(ResourceTable.Media_img);
                 }
@@ -79,31 +87,32 @@ public class Photoviewer extends Image {
         }
 
 
-}
-//        import ohos.agp.components.Image;
-//        import ohos.agp.components.Slider;
+        @Override
+        public void onClick(Component component) {
+                this.component = component;
+                Timer time = new Timer();
 
-//public class Photoviewer  {
-//    public void onClick(Slider s, Image img){
-//        s.setValueChangedListener(new Slider.ValueChangedListener() {
-//            @Override
-//            public void onProgressUpdated(Slider slider, int i, boolean b) {
-//                float scale=((i/100.0f)+1);
-//                img.setScaleX(scale);
-//                img.setScaleY(scale);
-//
-//            }
-//
-//            @Override
-//            public void onTouchStart(Slider slider) {
-//
-//            }
-//
-//            @Override
-//            public void onTouchEnd(Slider slider) {
-//
-//            }
-//        });
-//    }
-//
-//}
+                time.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                                AnimatorProperty animatorProperty = component.createAnimatorProperty();
+                                animatorProperty.scaleX(1).scaleY(1);
+                                animatorProperty.start();
+                        }
+                },500);
+                AnimatorProperty animatorProperty = component.createAnimatorProperty();
+                animatorProperty.scaleX(5).scaleY(5);
+                animatorProperty.start();
+        }
+
+
+        public void setContext(Context c)
+        {
+                this.d=c;
+        }
+
+        public Context getC()
+        {
+                return d;
+        }
+}
