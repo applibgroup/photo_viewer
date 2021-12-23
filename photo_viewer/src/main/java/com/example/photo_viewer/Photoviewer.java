@@ -100,6 +100,14 @@ public class Photoviewer extends Image implements Component.ClickedListener, oho
                                 animatorProperty.start();
                         }
                 },500);
+                time.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                                AnimatorProperty animatorProperty = component.createAnimatorProperty();
+                                animatorProperty.rotate(360).setDuration(1500);
+                                animatorProperty.start();
+                        }
+                },1000);
                 AnimatorProperty animatorProperty = component.createAnimatorProperty();
                 animatorProperty.scaleX(5).scaleY(5);
                 animatorProperty.start();
