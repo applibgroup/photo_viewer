@@ -5,7 +5,7 @@
 
 An HMOS library that makes any image to be zoom and rotate
 <p>
-	<img src="img.png" width = 320 height = 512/>
+	<img src="photoviewer.png" width = 320 height = 512/>
 </p>
 
 
