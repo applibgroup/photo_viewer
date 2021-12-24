@@ -4,11 +4,7 @@ package com.example.myapplication.slice;
         import com.example.photo_viewer.Photoviewer;
         import ohos.aafwk.ability.AbilitySlice;
         import ohos.aafwk.content.Intent;
-        import ohos.agp.animation.AnimatorProperty;
-        import ohos.agp.components.Image;
-        import ohos.agp.components.Slider;
-        import ohos.agp.components.Text;
-        import ohos.global.resource.Resource;
+
 
 public class MainAbilitySlice extends AbilitySlice {
     @Override

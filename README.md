@@ -5,24 +5,34 @@
 
 An HMOS library that makes any image to be zoom and rotate
 <p>
-	<img src="img.png" width = 320 height = 512/>
+     <img src="photoviewer.gif" width="356">
 </p>
-
-
 
 ## Integration
 
 1. For using Photoviewer module in sample app, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har.
 ```
-    implementation project(path: ':photo_viewer')
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+        implementation project(path: ':photo_viewer')
+        testImplementation 'junit:junit:4.13'
+        ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+    }
 ```
 2. For using Photoviewer module in separate application using har file, add the har file in the entry/libs folder and add the dependencies in entry/build.gradle file.
 ```
-  implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.13'
+}
 ```
 3. For using Photoviewer module from a remote repository in separate application, add the below dependencies in entry/build.gradle file.
 ```
- testImplementation 'junit:junit:4.13'
+dependencies {
+        implementation 'dev.applibgroup:photo_viewer:1.0.0'
+        testImplementation 'junit:junit:4.13'
+        ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+}
 ```
 
 ## Usage
