@@ -8,15 +8,14 @@ package com.example.myapplication.slice;
         import ohos.agp.components.Image;
         import ohos.agp.components.Slider;
         import ohos.agp.components.Text;
+        import ohos.global.resource.Resource;
 
 public class MainAbilitySlice extends AbilitySlice {
-    AnimatorProperty animatorProperty;
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
-        Photoviewer P = (Photoviewer) findComponentById(ResourceTable.Media_img);
-
+       
 
     }
 

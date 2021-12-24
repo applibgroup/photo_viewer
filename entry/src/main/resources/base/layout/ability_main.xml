@@ -9,11 +9,7 @@
         ohos:height="match_parent"
         ohos:width="match_parent"
         ohos:image_src="$media:img"
-        ohos:clickable="true"
-        >
-
-</com.example.photo_viewer.Photoviewer>
-
+        ohos:clickable="true"/>
 </DirectionalLayout>
 
 
