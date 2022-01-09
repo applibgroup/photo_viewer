@@ -51,6 +51,7 @@ Create a Image in your layout file by adding the following XML tag:
 
 ``` xml
     <com.example.photo_viewer.Photoviewer
+        ohos:id="$+id:image"
         ohos:height="match_parent"
         ohos:width="match_parent"
         ohos:image_src="$media:img"

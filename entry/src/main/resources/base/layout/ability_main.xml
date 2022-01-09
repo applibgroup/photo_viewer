@@ -6,6 +6,7 @@
     ohos:alignment="center"
     ohos:orientation="vertical">
     <com.example.photo_viewer.Photoviewer
+        ohos:id="$+id:image"
         ohos:height="match_parent"
         ohos:width="match_parent"
         ohos:image_src="$media:img"

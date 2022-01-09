@@ -4,12 +4,12 @@ apply plugin: 'org.sonarqube'
 apply plugin: 'checkstyle'
 //For instructions on signature configuration, see https://developer.harmonyos.com/en/docs/documentation/doc-guides/ide_debug_device-0000001053822404#EN-US_TOPIC_0000001154985555__section1112183053510
 ohos {
-    compileSdkVersion 6
+    compileSdkVersion 5
     defaultConfig {
-        compatibleSdkVersion 5
+        compatibleSdkVersion 6
     }
 }
-	
+
 buildscript {
     repositories {
         maven {
@@ -19,10 +19,10 @@ buildscript {
         maven {
             url 'https://developer.huawei.com/repo/'
         }
-		jcenter()
+        jcenter()
     }
     dependencies {
-	  classpath 'com.huawei.ohos:hap:3.0.3.4'
+        classpath 'com.huawei.ohos:hap:2.4.4.2'
         classpath 'com.huawei.ohos:decctest:1.2.6.0'
         classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3"
     }
@@ -36,13 +36,13 @@ allprojects {
         maven {
             url 'https://developer.huawei.com/repo/'
         }
-	 maven {
+        maven {
             url 'https://mirrors.huaweicloud.com/repository/maven/'
         }
 
-		jcenter()
+        jcenter()
     }
-      task checkstyle(type: Checkstyle) {
+    task checkstyle(type: Checkstyle) {
         showViolations = true
         configFile file("config/checkstyle.xml")
         source 'entry/src/main/java'
