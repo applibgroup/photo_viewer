@@ -1,4 +1,5 @@
 package com.example.photo_viewer;
+
 import ohos.agp.animation.AnimatorProperty;
 import ohos.agp.components.AttrSet;
 import ohos.agp.components.Component;
@@ -6,17 +7,19 @@ import ohos.agp.components.Image;
 import ohos.app.Context;
 import java.util.Timer;
 import java.util.TimerTask;
+
 public class Photoviewer extends Image implements Component.ClickedListener, ohos.agp.render.render3d.Component {
-        public Component component;
+        Component component;
+
         public Photoviewer(Context context, AttrSet attrSet) {
                 super(context, attrSet);
                 setClickedListener(this);
         }
+
         @Override
         public void onClick(Component component) {
         this.component = component;
         Timer time = new Timer();
-
         time.schedule(new TimerTask() {
                 @Override
                 public void run() {
