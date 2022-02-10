@@ -1,7 +1,7 @@
 
 # Photo Viewer
 
-## Introduction
+# Introduction
 
 An HMOS library that makes any image to be zoom and rotate
 
