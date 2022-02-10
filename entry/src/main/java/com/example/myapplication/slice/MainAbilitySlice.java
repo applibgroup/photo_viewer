@@ -5,9 +5,6 @@ import ohos.aafwk.content.Intent;
 import com.example.myapplication.ResourceTable;
 import com.example.photo_viewer.Photoviewer;
 
-/**
- * @return 42
- */
 public class MainAbilitySlice extends AbilitySlice {
 
     @Override
